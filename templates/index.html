@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+header {
+  width: 100%;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+i {
+  color: #FF6000;
+}
+
+.header-icons {
+  display: flex;
+  gap: 14px;
+}
+
+.header-icons a:hover i {
+  animation: translateY 0.8s infinite alternate;
+  color: #403D38;
+}
+
+@keyframes translateY {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-8px) scale(1.1);
+  }
+}
+.header-button {
+  border: 1px solid #FF6000;
+  padding: 8px 24px;
+  border-radius: 4px;
+  color: #FF6000;
+  background-color: transparent;
+  transition: background-color 0.8s;
+}
+
+.header-button:hover {
+  border: 1px solid #403D38;
+  background-color: #403D38;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 14px;
+  width: 13vh;
+}
+
+@media screen and (max-width: 768px) {
+  .header-nav {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .header-nav i {
+    margin-top: 16px;
+    font-size: 34px;
+  }
+  .header-logo img {
+    width: 100%;
+    margin-top: 46px;
+  }
+  .header-button {
+    display: none;
+  }
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 8px;
+}
+
+.bg-home {
+  position: relative;
+}
+
+.bg-home::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(to bottom, rgba(218, 198, 200, 0.1), #DAC6C8), url("../img/bg.png");
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  opacity: 0.9;
+}
+
+.main {
+  color: #403D38;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+}
+.main h1 {
+  text-align: center;
+  line-height: 150%;
+  max-width: 940px;
+  font-size: 46px;
+}
+.main p {
+  text-align: center;
+  margin: 14px 0;
+}
+
+.button-contato {
+  padding: 14px 28px;
+  color: #403D38;
+  background-color: #FF6000;
+  border: 0;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 14px 0;
+}
+
+.button-contato:hover {
+  animation: scaleButton 0.8s infinite alternate;
+}
+
+@keyframes scaleButton {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.07);
+  }
+}
+@media screen and (max-width: 768px) {
+  .main {
+    min-height: 60vh;
+  }
+  .main h1 {
+    font-size: 34px;
+    padding: 0 14px;
+    width: 100%;
+  }
+  .main p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .main h1 {
+    font-size: 24px;
+  }
+}
+.sobre {
+  background-color: #DAC6C8;
+  overflow: hidden;
+  color: #403D38;
+}
+
+.sobre-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 34px 14px 64px 14px;
+}
+.sobre-container img {
+  max-width: 570px;
+}
+
+.sobre-container div {
+  flex: 1;
+}
+
+.sobre-descricao h2 {
+  font-size: 38px;
+  margin-bottom: 24px;
+}
+.sobre-descricao p {
+  margin-bottom: 14px;
+  line-height: 150%;
+}
+
+@media screen and (max-width: 768px) {
+  .sobre-container {
+    flex-direction: column;
+  }
+}
+.servico {
+  background-color: #f9f1f1;
+  color: #403D38;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 14px;
+}
+
+.servico-content h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 14px;
+}
+
+.servico-content p {
+  line-height: 150%;
+  margin-bottom: 14px;
+  text-align: center;
+  max-width: 780px;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  padding: 0 44px 34px 44px;
+}
+
+.product {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f1f1;
+  border-radius: 8px;
+  box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.product img {
+  width: 100%;
+  max-width: 354px;
+  transition: transform 0.2s;
+}
+
+.product img:hover {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.product-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+  background-color: #f9f1f1;
+  z-index: 2;
+}
+
+.product-info button {
+  color: #f9f1f1;
+  background-color: #FF6000;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 0;
+  cursor: default;
+}
+
+@media screen and (max-width: 768px) {
+  .products {
+    flex-direction: column;
+  }
+  .product img {
+    max-width: 740px;
+  }
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 0;
+  gap: 24px;
+  color: #403D38;
+}
+
+.flooter-icons {
+  display: flex;
+  gap: 8px;
+  color: #FF6000;
+}
+
+.flooter-icons a:hover i {
+  animation: translateY 0.8s infinite alternate;
+  color: #403D38;
+}
+
+@keyframes translateY {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-8px) scale(1.1);
+  }
+}
+.button-whatsapp {
+  position: fixed;
+  bottom: 14px;
+  right: 24px;
+  z-index: 3;
+}
+.button-whatsapp img {
+  max-width: 74px;
+  transition: transform 0.4s;
+}
+.button-whatsapp img:hover {
+  transform: scale(1.1);
+}
+
+.button-whatsapp .whatsapp-text {
+  visibility: hidden;
+  position: absolute;
+  width: 120px;
+  top: 20px;
+  left: -130px;
+  background-color: #403D38;
+  color: #f9f1f1;
+  padding: 4px;
+  border-radius: 8px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.button-whatsapp:hover .whatsapp-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .button-whatsapp img {
+    max-width: 64px;
+  }
+}
+
+body {
+  font-family: "Sora", sans-serif;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #DAC6C8;
+}
+
+button {
+  font-family: "Sora", sans-serif;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */
+
+    </style>
+
+    <title>Ah Pee Essi - Sua Papelaria</title>
+</head>
+<body>
+    <div class="bg-home">
+    <header>
+            <nav class="header-nav container">
+                <div class="header-icons">
+                    <a href="#">
+                        <i class="fa-brands fa-instagram fa-2x"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook fa-2x"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-tiktok fa-2x"></i>
+                    </a>
+                </div>
+
+                <div class="header-logo">
+                    <img src="{{ dados[10] }}" alt="Logo da papelaria">
+                </div>
+
+                <div>
+                    <a class="header-button" target="_blank" href="https://api.whatsapp.com/send?phone=5516000000000&text=Ol%C3%A1,%20Pode%20me%20ajudar">
+                        Entre em contato
+                    </a>
+                </div>
+            </nav>
+
+            <main class="main container">
+                <h1>{{ dados[0] }}</h1>
+                <p>{{ dados[1] }}</p>
+                <a href="#" class="button-contato">
+                    Venha conferir!
+                </a>
+            </main>
+
+        </header>
+
+    </div>
+
+    <section class="sobre">
+        <div class="container sobre-container">
+            <div>
+                <img src="img/imagem.png" alt="Sobre a papelaria">
+            </div>
+
+            <div class="sobre-descricao">
+                <h2>Sobre</h2>
+                <p>{{ dados[2] }}</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="servico">
+        <div class="servico-content container">
+            <h2>Produtos</h2>
+            <p>{{ dados[3] }}</p>
+        </div>
+
+        <section class="products">
+            <div class="product">
+                <img src="img/produto1.jpg" alt="Produto 1">
+
+                <div class="product-info">
+                    <strong>kit volta as aulas</strong>
+                    <button>
+                        R$ 40,00
+                    </button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="img/produto2.jpg" alt="Produto 1">
+
+                <div class="product-info">
+                    <strong>Mochila</strong>
+                    <button>
+                        R$ 140,00
+                    </button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="produto3.jpg" alt="Produto 1">
+
+                <div class="product-info">
+                    <strong>Caderno</strong>
+                    <button>
+                        R$ 20,00
+                    </button>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <div class="servico">
+        <h2>Venha conhecer!</h2>
+    </div>
+
+    <iframe width="100%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.2691247098023!2d-47.73557582826476!3d-21.18146538387321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b9c0ce0b2f4b6f%3A0xf2ad931d7e75ae16!2sR.%20Conselheiro%20Ferreira%20Viana%2C%20186%20-%20Jardim%20Jose%20Figueira%2C%20Ribeir%C3%A3o%20Preto%20-%20SP%2C%2014093-493!5e0!3m2!1spt-BR!2sbr!4v1698189478648!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <footer class="footer">
+        <div class="flooter-icons">
+            <a href="#">
+                <i class="fa-brands fa-instagram fa-2x"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-facebook fa-2x"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-tiktok fa-2x"></i>
+            </a>
+        </div>
+
+        <div class="header-logo">
+            <img src="{{ dados[10] }}" alt="Logo Papelaria">
+        </div>
+
+        <p>Copyright 2023 | Ah Pee Essi - Todos direitos reservados.</p>
+    </footer>
+
+    <a href="https://api.whatsapp.com/send?phone=5516000000000&text=Ol%C3%A1,%20Pode%20me%20ajudar" class="button-whatsapp" target="_blank">
+        <img src="img/whatssapp.svg" alt="Botão WhatsApp">
+        <span class="whatsapp-text">Fale conosco!</span>
+    </a>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

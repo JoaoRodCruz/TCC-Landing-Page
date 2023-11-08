@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizar Landing Page</title>
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0c0ce94d;
+}
+
+.container {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+}
+
+.form-image {
+    width: 50%;
+    height: 190vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fde3a7d7;
+    padding: 1rem;
+}
+
+.form-image img {
+    width: 31rem;
+}
+
+.form {
+    width: 50%;
+    height: 190vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 3rem;
+}
+
+.form-header {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-button {
+    display: flex;
+    align-items: center;
+}
+
+.login-button button {
+    border: none;
+    background-color: #6c63ff;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-button button:hover {
+    background-color: #6b63fff1;
+}
+
+.login-button button a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+}
+
+.form-header h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: #6c63ff;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+.input-box input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+    font-size: 0.8rem;
+}
+
+.input-box input:hover {
+    background-color: #eeeeee75;
+}
+
+.input-box input:focus-visible {
+    outline: 1px solid #6c63ff;
+}
+
+.input-box label,
+
+.gender-title h6 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.input-box input::placeholder {
+    color: #000000be;
+}
+
+.continue-button button {
+    width: 100%;
+    margin-top: 2.5rem;
+    border: none;
+    background-color: #6c63ff;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.continue-button button:hover {
+    background-color: #6b63fff1;
+}
+
+.continue-button button a {
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.textarea{
+    margin-top: 10px;
+    padding: 35px 10px 30px 10px;
+}
+
+@media screen and (max-width: 1330px) {
+    .form-image {
+        display: none;
+    }
+    .container {
+        width: 50%;
+    }
+    .form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1064px) {
+    .container {
+        width: 90%;
+        height: auto;
+    }
+    .input-group {
+        flex-direction: column;
+        z-index: 5;
+        padding-right: 5rem;
+        max-height: 10rem;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-image">
+            <img src="forms.svg" alt="">
+        </div>
+        <div class="form">
+            <form action="/tcc" method="POST">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Faça do seu jeito</h1>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="emrepsa">Nome da empresa</label>
+                        <input id="empresa" type="text" name="empresa" placeholder="Digite o nome da empresa" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="number">Número de contato</label>
+                        <input id="number" type="tel" name="telefone" placeholder="(xx) xxxx-xxxx" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="frase-inicial">Frase inicial</label>
+                        <input id="frase-inicial" type="text" name="frase-inicial" placeholder="Digite a frase inicial" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="frase-secundaria">Frase secundária</label>
+                        <input id="frase-secundaria" type="text" name="frase-secundaria" placeholder="Digite a frase secundária" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="Sobre">Fale sobre sua empresa:</label>
+                        <textarea class="textarea" name="sobre_empresa">Fale sobre sua empresa</textarea>
+                    </div>
+
+
+                    <div class="input-box">
+                        <label for="Sobre">Fale sobre seus produtos:</label>
+                        <textarea class="textarea" name="sobre_produto">Fale sobre seus produtos</textarea>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="produto1">Produto 1:</label>
+                        <input id="produto1" type="text" name="produto1" placeholder="Digite o nome do produto" required>
+                    </div>
+                    
+                    <div class="input-box">
+                        <label for="preco1">Preço do produto 1:</label>
+                        <input id="preco1" type="number" name="preco1" placeholder="Digite o preço o produto" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="produto2">Produto 2:</label>
+                        <input id="produto2" type="text" name="produto2" placeholder="Digite o nome do produto" required>
+                    </div>
+                    
+                    <div class="input-box">
+                        <label for="preco2">Preço do produto 2:</label>
+                        <input id="preco2" type="number" name="preco2" placeholder="Digite o preço o produto" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="produto3">Produto 3:</label>
+                        <input id="produto3" type="text" name="produto3" placeholder="Digite o nome do produto" required>
+                    </div>
+                    
+                    <div class="input-box">
+                        <label for="preco3">Preço do produto 3:</label>
+                        <input id="preco3" type="number" name="preco3" placeholder="Digite o preço o produto" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="logo">Envie a imagem da logo (512x512):</label>
+                        <input id="logo" type="text" name="logo" placeholder="Envie a imagem da logo" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="imagem-produto1">Envie a imagem do produto 1 (354x236):</label>
+                        <input id="imagem-produto1" type="file" name="imagem-produto1" placeholder="Envie a imagem do produto 1" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="imagem-produto2">Envie a imagem do produto 2 (354x236):</label>
+                        <input id="imagem-produto2" type="file" name="imagem-produto2" placeholder="Envie a imagem do produto 2" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="imagem-produto3">Envie a imagem do produto 3 (354x236):</label>
+                        <input id="imagem-produto3" type="file" name="imagem-produto3" placeholder="Envie a imagem do produto 3" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="imagem-bg">Envie a imagem de fundo (500x381):</label>
+                        <input id="imagem-bg" type="file" name="imagem-bg" placeholder="Envie a imagem de fundo" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="imagem-sec">Envie a imagem secundária (640x640):</label>
+                        <input id="imagem-sec" type="file" name="imagem-sec" placeholder="Envie a imagem secundária" required>
+                    </div>
+                </div>
+
+                <div class="continue-button">
+                    <button type="submit"> Continuar </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

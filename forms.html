@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="forms.css">
+    <title>Customizar Landing Page</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-image">
+            <img src="img/forms.svg" alt="">
+        </div>
+        <div class="form">
+            <form action="tcc.py" method="POST" enctype="multipart/form-data">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Faça do seu jeito</h1>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="emrepsa">Nome da empresa</label>
+                        <input id="empresa" type="text" name="empresa" placeholder="Digite o nome da empresa" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="number">Número de contato</label>
+                        <input id="number" type="tel" name="telefone" placeholder="(xx) xxxx-xxxx" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="frase-inicial">Frase inicial</label>
+                        <input id="frase-inicial" type="text" name="frase-inicial" placeholder="Digite a frase inicial" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="frase-secundaria">Frase secundária</label>
+                        <input id="frase-secundaria" type="text" name="frase-secundaria" placeholder="Digite a frase secundária" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="Sobre">Fale sobre sua empresa:</label>
+                        <textarea class="textarea" name="sobre_empresa">Fale sobre sua empresa</textarea>
+                    </div>
+
+
+                    <div class="input-box">
+                        <label for="Sobre">Fale sobre seus produtos:</label>
+                        <textarea class="textarea" name="sobre_produto">Fale sobre seus produtos</textarea>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="produto1">Produto 1:</label>
+                        <input id="produto1" type="text" name="produto1" placeholder="Digite o nome do produto" required>
+                    </div>
+                    
+                    <div class="input-box">
+                        <label for="preco1">Preço do produto 1:</label>
+                        <input id="preco1" type="number" name="preco1" placeholder="Digite o preço o produto" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="produto2">Produto 2:</label>
+                        <input id="produto2" type="text" name="produto2" placeholder="Digite o nome do produto" required>
+                    </div>
+                    
+                    <div class="input-box">
+                        <label for="preco2">Preço do produto 2:</label>
+                        <input id="preco2" type="number" name="preco2" placeholder="Digite o preço o produto" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="produto3">Produto 3:</label>
+                        <input id="produto3" type="text" name="produto3" placeholder="Digite o nome do produto" required>
+                    </div>
+                    
+                    <div class="input-box">
+                        <label for="preco3">Preço do produto 3:</label>
+                        <input id="preco3" type="number" name="preco3" placeholder="Digite o preço o produto" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="logo">Envie a imagem da logo (512x512):</label>
+                        <input id="logo" type="file" name="logo" placeholder="Envie a imagem da logo" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="imagem-produto1">Envie a imagem do produto 1 (354x236):</label>
+                        <input id="imagem-produto1" type="file" name="imagem-produto1" placeholder="Envie a imagem do produto 1" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="imagem-produto2">Envie a imagem do produto 2 (354x236):</label>
+                        <input id="imagem-produto2" type="file" name="imagem-produto2" placeholder="Envie a imagem do produto 2" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="imagem-produto3">Envie a imagem do produto 3 (354x236):</label>
+                        <input id="imagem-produto3" type="file" name="imagem-produto3" placeholder="Envie a imagem do produto 3" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="imagem-bg">Envie a imagem de fundo (500x381):</label>
+                        <input id="imagem-bg" type="file" name="imagem-bg" placeholder="Envie a imagem de fundo" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="imagem-sec">Envie a imagem secundária (640x640):</label>
+                        <input id="imagem-sec" type="file" name="imagem-sec" placeholder="Envie a imagem secundária" required>
+                    </div>
+                </div>
+
+                <div class="continue-button">
+                    <button type="submit"> Continuar </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
